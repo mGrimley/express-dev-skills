@@ -12,22 +12,23 @@
     <ul>
         <% skills.forEach(function(s) { %>
             <li>
-                <form 
-                    action="/todos/<%= s.id %>?_method=DELETE"
+                <!-- <form 
+                    action="/skills/<%= s.id %>?_method=DELETE"
                     class="delete-form"
                     method="POST"
                 >
                     <button type="submit">X</button>
-                </form>
-                <a href="/todos/<%= s.id %>">
+                </form> -->
+                <a href="/skills/<%= s.id %>">
                     <%= s.skill %>
                 </a>
-                - Years Experience: 
+                - Years of experience: 
                 <%= s.yearsExp %>
             </li>
         <% }); %>
     </ul>
-    <!-- <a href="/todos/new">Add To-Do</a> -->
+
+   <h3><a href="/">Home</a></h3>
 </body>
 
 </html>

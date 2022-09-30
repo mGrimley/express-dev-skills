@@ -1,5 +1,4 @@
 const skills = [
-    {id: 125223, skill: 'Juggling', yearsExp: .5},
     {id: 125224, skill: 'Origami', yearsExp: 20},
     {id: 125225, skill: 'C++', yearsExp: 2},
     {id: 125226, skill: 'Java', yearsExp: 3},
@@ -25,7 +24,6 @@ function getOne(id) {
 
 function create(skill) {
     skill.id = Date.now() % 1000000
-    skill.yearsExp = 0
     skills.push(skill)
 }
 
