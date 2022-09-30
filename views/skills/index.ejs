@@ -8,15 +8,10 @@
     <title><%= title %></title>
 </head>
 <body>
-    <h1>Skills<h1>
+    <h1>Skills</h1>
     <ul>
         <% skills.forEach(function(s) { %>
             <li>
-                <a href="/skills/<%= s.id %>">
-                    <%= s.skill %>
-                </a>
-                - Years of experience: 
-                <%= s.yearsExp %>
                 <form 
                     action="/skills/<%= s.id %>?_method=DELETE"
                     class="delete-form"
@@ -24,12 +19,18 @@
                 >
                     <button type="submit">X</button>
                 </form>
+                <a href="/skills/<%= s.id %>">
+                    <%= s.skill %>
+                </a>
+                - Years of experience: 
+                <%= s.yearsExp %>
             </li>
+            <br>
         <% }); %>
     </ul>
 
-    <h3><a href="/">Home</a></h3>
     <h3><a href="/skills/new">Add Skill</a></h3>
+    <h3><a href="/">Home</a></h3>
 </body>
 
 </html>
